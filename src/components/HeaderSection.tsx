@@ -64,10 +64,10 @@ const HeaderSection: React.FC = () => {
       </Swiper>
 
       {/* Pause/Play Toggle Button */}
-      <div className="absolute bottom-4 right-4 flex items-center justify-center z-20">
+      <div className="absolute top-4 right-4 flex items-center space-x-4 z-50">
         <button
           onClick={handleToggleAutoplay}
-          className="bg-gray-800 text-white p-3 rounded-full shadow-lg transition-transform transform hover:scale-105 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+          className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold p-2 rounded-full shadow-md transition duration-300 ease-in-out"
         >
           {autoplay ? (
             <i className="fas fa-pause"></i> // FontAwesome pause icon
