@@ -38,7 +38,7 @@ const HeaderSection: React.FC = () => {
         pagination={{
           el: ".swiper-pagination",
           clickable: true,
-          renderBullet: (index, className) => {
+          renderBullet: (_index: number, className: string) => {
             return `<span class="${className}"></span>`;
           },
         }}
