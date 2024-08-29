@@ -1,4 +1,5 @@
 import React from "react";
+import BackgroundImage from "/images/schedule.jpg";
 
 const AgendaSection: React.FC = () => {
   const agendaItems = [
@@ -13,14 +14,17 @@ const AgendaSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full min-h-screen bg-gradient-to-r from-pink-500 to-red-600 flex flex-col items-center justify-center px-4 py-16">
+    <div
+      className="relative bg-cover bg-center text-white py-16 px-6 lg:px-20"
+      style={{ backgroundImage: `url(${BackgroundImage})` }}
+    >
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black opacity-40"></div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-4xl text-center text-white px-8 md:px-0">
+      <div className="relative max-w-4xl mx-auto text-center">
         {/* Main Header */}
-        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 font-cinzel">
           Agenda
         </h2>
 
@@ -39,13 +43,15 @@ const AgendaSection: React.FC = () => {
               key={index}
               className="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2"
             >
-              <p className="font-semibold text-xl mb-2">{item.time}</p>
+              <p className="font-semibold text-xl mb-2 font-cinzel">
+                {item.time}
+              </p>
               <p className="text-lg font-medium">{item.title.toUpperCase()}</p>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
