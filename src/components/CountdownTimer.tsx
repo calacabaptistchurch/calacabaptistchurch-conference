@@ -17,7 +17,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
     seconds: 0,
   });
 
-  const [showCTA, setShowCTA] = useState(false);
+  // const [showCTA, setShowCTA] = useState(false);
 
   useEffect(() => {
     const target = new Date(targetDate).getTime();
@@ -51,7 +51,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
     return () => clearInterval(interval); // Clean up interval on unmount
   }, [targetDate]);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       // Show CTA button when user scrolls down 100 pixels
@@ -65,7 +65,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, []); */
 
   return (
     <div className="sticky top-0 z-50 bg-yellow-500 text-black py-2 px-4 shadow-lg">
@@ -89,7 +89,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
       </div>
 
       {/* CTA Button that appears on scroll */}
-      {showCTA && (
+      {/*       {showCTA && (
         <div className="fixed bottom-4 right-4">
           <a
             href="https://forms.gle/KTdSRKg4Sqyq6mgj8"
@@ -98,7 +98,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
             Register Now
           </a>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
