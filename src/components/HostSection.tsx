@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 interface BibleStudy {
   name: string;
@@ -24,6 +24,16 @@ const HostSection: React.FC<HostSectionProps> = ({
   bibleStudies,
   galleryImages, // Gallery images passed as a prop
 }) => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const handleImageClick = (image: string) => {
+    setSelectedImage(image);
+  };
+
+  const handleClosePopup = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <div className="relative bg-gradient-to-b from-purple-700 to-purple-900 text-white py-16 px-6 lg:px-20">
       {/* Background overlay */}
@@ -32,7 +42,7 @@ const HostSection: React.FC<HostSectionProps> = ({
       {/* Content Container */}
       <div className="relative z-10 max-w-6xl mx-auto text-center">
         {/* Main Header */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 font-cinzel">
           Know Your Host
         </h2>
 
@@ -41,7 +51,7 @@ const HostSection: React.FC<HostSectionProps> = ({
           {/* Image Column */}
           <div className="flex flex-col items-center space-y-8">
             {/* Church Logo */}
-            <div className="max-w-xs flex-shrink-0 transform transition-transform duration-300 hover:scale-105">
+            <div className="max-w-xs flex-shrink-0 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
               <img
                 src={churchLogo}
                 alt={churchName}
@@ -64,43 +74,63 @@ const HostSection: React.FC<HostSectionProps> = ({
         {/* Mission and Vision in a 2-column layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
-            <h4 className="text-xl md:text-2xl font-bold mb-4 text-purple-300">
+            <h4 className="text-xl md:text-2xl font-bold mb-4 text-purple-300 font-cinzel">
               Mission
             </h4>
             <p className="text-lg md:text-xl leading-relaxed">{mission}</p>
           </div>
           <div className="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
-            <h4 className="text-xl md:text-2xl font-bold mb-4 text-purple-300">
+            <h4 className="text-xl md:text-2xl font-bold mb-4 text-purple-300 font-cinzel">
               Vision
             </h4>
             <p className="text-lg md:text-xl leading-relaxed">{vision}</p>
           </div>
         </div>
 
-        {/* Gallery Images in 1 row of 4 columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        {/* Gallery Images in responsive grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-12">
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="transform transition-transform duration-300 hover:scale-105"
+              className="transform transition-transform duration-300 hover:scale-105 cursor-pointer"
+              onClick={() => handleImageClick(image)}
             >
               <img
                 src={image}
                 alt={`Gallery Image ${index + 1}`}
-                className="w-full rounded-lg shadow-xl"
+                className="w-full h-auto rounded-lg shadow-xl"
               />
             </div>
           ))}
         </div>
 
+        {/* Popup for larger image */}
+        {selectedImage && (
+          <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+            <div className="relative max-w-screen-sm max-h-screen">
+              <img
+                src={selectedImage}
+                alt="Popup"
+                className="w-full h-auto rounded-lg shadow-xl transform transition-transform duration-300 scale-70"
+              />
+              <button
+                onClick={handleClosePopup}
+                className="absolute top-2 right-2 text-black text-xl md:text-2xl font-bold hover:text-red-500 transition-colors"
+              >
+                &times;
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Bible Studies */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {bibleStudies.map((study, index) => (
             <div
               key={index}
-              className="p-8 bg-purple-800 bg-opacity-80 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-opacity-100"
+              className="p-8 bg-purple-800 bg-opacity-80 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-opacity-90"
             >
-              <h5 className="text-xl font-bold mb-2 text-purple-200">
+              <h5 className="text-xl font-bold mb-2 text-purple-200 font-cinzel">
                 {study.name}
               </h5>
               <p className="text-lg leading-relaxed">{study.description}</p>

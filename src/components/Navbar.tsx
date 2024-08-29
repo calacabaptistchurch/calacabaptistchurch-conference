@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   return (
-    <header
-      className={`top-0 z-50 transition-shadow duration-300 bg-transparent`}
-    >
+    <header className={` transition-shadow duration-300 bg-transparent`}>
       <nav
         className="bg-gray-800 p-4"
         style={{
@@ -13,16 +11,20 @@ const Navbar: React.FC = () => {
         }}
       >
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="text-white text-lg font-bold">
+          {/* Logo/Title */}
+          <Link
+            to="/"
+            className="text-white text-xl md:text-2xl font-bold tracking-wide"
+          >
             Missions Conference
           </Link>
-          <div>
-            <Link to="/" className="text-gray-300 hover:text-white mx-2">
-              Home
-            </Link>
+
+          {/* Navigation Links */}
+          <div className="flex items-center space-x-4">
+            {/* Register Button */}
             <a
               href="https://forms.gle/KTdSRKg4Sqyq6mgj8"
-              className="text-gray-300 hover:text-white mx-2"
+              className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out hover:-translate-y-2"
             >
               Register
             </a>
