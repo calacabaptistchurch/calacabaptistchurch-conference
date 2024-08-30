@@ -11,6 +11,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css"; // Import FontAwesome CS
 import MainSlide from "./slides/MainSlide";
 import RegistrationSlide from "./slides/Registration";
 import CountdownTimer from "./CountdownTimer";
+import MissionMindedKaba from "./slides/MissionMindedKaba";
 
 const HeaderSection: React.FC = () => {
   const [autoplay, setAutoplay] = useState(true);
@@ -48,6 +49,9 @@ const HeaderSection: React.FC = () => {
         </SwiperSlide>
         <SwiperSlide>
           <RegistrationSlide />
+        </SwiperSlide>
+        <SwiperSlide>
+          <MissionMindedKaba />
         </SwiperSlide>
 
         {/* Swiper navigation buttons */}
