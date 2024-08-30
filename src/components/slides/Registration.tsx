@@ -31,14 +31,14 @@ const RegistrationSlide: React.FC = () => {
         </h2>
         {/* Fee Details */}
         <p className="text-2xl md:text-3xl lg:text-4xl font-light mb-4 font-cinzel">
-          Participation Fee: ₱250.00
+          Registration Fee: ₱150.00
         </p>
         <p className="text-sm md:text-xl lg:text-2xl font-light mb-4">
           Your registration includes:
         </p>
         <ul className="text-sm md:text-xl lg:text-2xl font-light list-disc list-inside mb-8">
           <li>A Complimentary Book from Voice of the Martyrs</li>
-          <li>A Chance to Win an ESV Study Bible</li>
+          <li>A Chance to Win an ESV Study Bible worth ₱2,000.00</li>
           <li>Exclusive Conference Merchandise</li>
           <li>And More Surprises!</li>
         </ul>
