@@ -78,8 +78,8 @@ const MainSlide: React.FC = () => {
         </div>
         {/* Closing Text */}
         <p className="text-lg md:text-xl font-light">
-          Open to all Christian Churches in the region of Calabarzon (Region
-          IV-A)
+          Open to all Christian Churches in the Province of Batangas and nearby
+          Churches
         </p>
       </div>
     </div>
