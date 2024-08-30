@@ -47,15 +47,16 @@ const MainSlide: React.FC = () => {
             Where He Leads Me
           </p>
         </div>
+        <p className="text-xl md:text-2xl lg:text-3xl font-light italic mb-8">
+          Isaiah 6:8
+        </p>
         {/* Event Date */}
         <div className="bg-yellow-500 text-black inline-block px-6 py-2 rounded-full mb-8">
           <p className="text-xl md:text-2xl font-bold">
             October 6, 2024 (Sunday, 2PM)
           </p>
         </div>
-        <p className="text-xl md:text-2xl lg:text-3xl font-light italic mb-8">
-          Isaiah 6:8
-        </p>
+
         {/* Partnership Section */}
         <p className="text-lg md:text-xl font-light mb-4">
           In Partnership With
@@ -79,7 +80,7 @@ const MainSlide: React.FC = () => {
         {/* Closing Text */}
         <p className="text-lg md:text-xl font-light">
           Open to all Christian Churches in the Province of Batangas and nearby
-          Churches
+          Areas
         </p>
       </div>
     </div>
