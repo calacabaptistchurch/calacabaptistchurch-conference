@@ -64,7 +64,8 @@ const RegistrationSlide: React.FC = () => {
         </div>
         {/* Closing Text */}
         <p className="text-sm md:text-xl font-light mb-4 font-cinzel">
-          Open to all Christian Churches in the Calabarzon Region (Region IV-A).
+          Open to all Christian Churches in the Province of Batangas and nearby
+          Churches
         </p>
         {/* Contact Information */}
         <div className="mt-8">
