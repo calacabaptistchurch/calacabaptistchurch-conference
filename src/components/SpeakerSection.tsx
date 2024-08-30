@@ -32,16 +32,31 @@ const SpeakerSection: React.FC<SpeakerSectionProps> = ({
       <div className="absolute inset-0 bg-black opacity-40"></div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-6xl mx-auto text-center font-cinzel">
+      <div className="relative z-10 max-w-6xl mx-auto text-center">
         {/* Main Header */}
-        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 font-cinzel">
           Our Speaker
         </h2>
 
         {/* Speaker Name */}
-        <h3 className="text-2xl md:text-4xl font-semibold text-yellow-300 mb-12">
+        <h3 className="text-2xl md:text-4xl font-semibold text-yellow-300 mb-12 font-cinzel">
           {speakerName}
         </h3>
+
+        {/* Speaker's Background */}
+        <p className="text-lg md:text-xl text-white mb-12 px-4">
+          Pastor Joel Valdehueza, our esteemed speaker, brings a wealth of
+          experience and academic rigor, holding a Bachelor of Religious
+          Education from Doane Baptist Seminary and a Master of Arts in Biblical
+          Studies from the Baptist Bible Seminary and Institute (BBSI). As a
+          dedicated staff member of Voice of the Martyrs Philippines (VOM), he
+          has become a respected voice in advocating the ministry’s mission,
+          frequently addressing diverse audiences in seminars, conferences, and
+          religious gatherings across the nation. In addition to his work with
+          VOM, Pastor Valdehueza serves as the Luzon Coordinator for Heartbeat
+          Response Team, Inc., and has faithfully led Pasig Baptist Church of
+          Buenmar as Senior Pastor since 2006.
+        </p>
 
         {/* Image Section */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">

@@ -9,6 +9,8 @@ interface HostSectionProps {
   churchName: string;
   churchLogo: string;
   churchDescription: string;
+  churchDescription2: string;
+  churchDescription3: string;
   mission: string;
   vision: string;
   bibleStudies: BibleStudy[];
@@ -19,6 +21,8 @@ const HostSection: React.FC<HostSectionProps> = ({
   churchName,
   churchLogo,
   churchDescription,
+  churchDescription2,
+  churchDescription3,
   mission,
   vision,
   bibleStudies,
@@ -62,11 +66,14 @@ const HostSection: React.FC<HostSectionProps> = ({
 
           {/* Church Description, Mission, Vision */}
           <div className="max-w-2xl text-center lg:text-left space-y-6 lg:ml-8">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              {churchName}
-            </h3>
             <p className="text-lg md:text-xl leading-relaxed mb-6">
               {churchDescription}
+            </p>
+            <p className="text-lg md:text-xl leading-relaxed mb-6">
+              {churchDescription2}
+            </p>
+            <p className="text-lg md:text-xl leading-relaxed mb-6">
+              {churchDescription3}
             </p>
           </div>
         </div>
