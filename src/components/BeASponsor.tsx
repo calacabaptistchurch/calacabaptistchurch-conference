@@ -217,7 +217,7 @@ const BeASponsor: React.FC = () => {
       </section>
 
       {/* Mission Organizations We Support */}
-      <section className="bg-gray-100 mb-12 py-16 px-6 lg:px-20">
+      <section className="bg-gray-100 py-16 px-6 lg:px-20">
         <div className="max-w-3xl mx-auto">
           <h3 className="text-2xl font-semibold text-gray-900 mb-6">
             Mission Organizations We Support
@@ -295,8 +295,25 @@ const BeASponsor: React.FC = () => {
         </div>
       </section>
 
+      {/* Call to Action */}
+      <section className="bg-deepRed text-white text-center py-16 px-6 lg:px-20">
+        <h3 className="text-2xl font-semibold mb-4">
+          Ready to Make a Difference?
+        </h3>
+        <p className="text-lg mb-6">
+          Your sponsorship will have a lasting impact on the lives of many. Join
+          us in spreading God's word and love across the globe.
+        </p>
+        <a
+          href="https://forms.gle/87b4MLVAjo8noFnc9"
+          className="bg-brightYellow text-deepPurple text-lg font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:-translate-y-1 hover:bg-yellow-600"
+        >
+          Become a Sponsor Today!
+        </a>
+      </section>
+
       {/* Sponsorship Levels */}
-      <section className="max-w-7xl mx-auto mb-12 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto mb-12 py-16 px-6 lg:px-20">
         <h3 className="text-3xl font-semibold text-gray-900 mb-10 text-center">
           Choose Your Sponsorship Level
         </h3>
@@ -370,23 +387,6 @@ const BeASponsor: React.FC = () => {
             </div>
           ))}
         </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="bg-deepRed text-white text-center py-16 px-6 lg:px-20">
-        <h3 className="text-2xl font-semibold mb-4">
-          Ready to Make a Difference?
-        </h3>
-        <p className="text-lg mb-6">
-          Your sponsorship will have a lasting impact on the lives of many. Join
-          us in spreading God's word and love across the globe.
-        </p>
-        <a
-          href="https://forms.gle/87b4MLVAjo8noFnc9"
-          className="bg-brightYellow text-deepPurple text-lg font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:-translate-y-1 hover:bg-yellow-600"
-        >
-          Become a Sponsor Today!
-        </a>
       </section>
 
       {/* FAQs */}
