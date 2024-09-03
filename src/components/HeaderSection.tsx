@@ -22,6 +22,20 @@ const HeaderSection: React.FC = () => {
 
   return (
     <>
+      {/* Pause/Play Toggle Button */}
+      <div className="absolute top-20 right-4 flex items-center space-x-4 z-50">
+        <button
+          onClick={handleToggleAutoplay}
+          className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold p-2 rounded-full shadow-md transition duration-300 ease-in-out"
+        >
+          {autoplay ? (
+            <i className="fas fa-pause"></i> // FontAwesome pause icon
+          ) : (
+            <i className="fas fa-play"></i> // FontAwesome play icon
+          )}
+        </button>
+      </div>
+
       {/* Sticky Countdown Timer */}
       <CountdownTimer targetDate="2024-10-06T00:00:00+08:00" />
 
@@ -66,20 +80,6 @@ const HeaderSection: React.FC = () => {
         {/* Swiper pagination */}
         <div className="swiper-pagination"></div>
       </Swiper>
-
-      {/* Pause/Play Toggle Button */}
-      <div className="absolute top-4 right-4 flex items-center space-x-4 z-50">
-        <button
-          onClick={handleToggleAutoplay}
-          className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold p-2 rounded-full shadow-md transition duration-300 ease-in-out"
-        >
-          {autoplay ? (
-            <i className="fas fa-pause"></i> // FontAwesome pause icon
-          ) : (
-            <i className="fas fa-play"></i> // FontAwesome play icon
-          )}
-        </button>
-      </div>
     </>
   );
 };
