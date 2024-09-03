@@ -39,10 +39,7 @@ const HostSection: React.FC<HostSectionProps> = ({
   };
 
   return (
-    <div className="relative bg-gradient-to-b from-purple-700 to-purple-900 text-white py-16 px-6 lg:px-20">
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
-
+    <div className="relative bg-deepPurple text-white py-16 px-6 lg:px-20">
       {/* Content Container */}
       <div className="relative z-10 max-w-6xl mx-auto text-center">
         {/* Main Header */}
@@ -95,7 +92,7 @@ const HostSection: React.FC<HostSectionProps> = ({
         </div>
 
         {/* Gallery Images in responsive grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {galleryImages.map((image, index) => (
             <div
               key={index}

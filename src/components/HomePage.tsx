@@ -4,6 +4,7 @@ import WhyJoinSection from "./WhyJoinSection";
 import AgendaSection from "./AgendaSection";
 import SpeakerSection from "./SpeakerSection";
 import HostSection from "./HostSection";
+import { Helmet } from "react-helmet";
 
 const HomePage: React.FC = () => {
   const galleryImages = [
@@ -42,6 +43,48 @@ const HomePage: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Going Where He Leads Me - Missions Conference</title>
+        <meta
+          name="description"
+          content="Join us for an inspiring Missions Conference. Explore topics on global outreach, missions strategies, and community engagement. Meet like-minded individuals and learn how to make a difference."
+        />
+
+        <meta
+          name="keywords"
+          content="Missions Conference, Global Outreach, Missions Strategies, Community Engagement, Religious Events, Evangelical Churches, Christian Churches, Baptist Churches, Conference"
+        />
+
+        <meta
+          property="og:title"
+          content="Going Where He Leads Me - Missions Conference"
+        />
+        <meta
+          property="og:description"
+          content="We invite you to join us as we reignite our passion for local and global missions, even amidst pressing global and economic challenges. At the conference, we will hear a powerful testimony from a missionary who has experienced persecution firsthand, along with insights from our resource speaker from Voice of the Martyrs Philippines. Their experiences will illuminate the harsh realities faced by believers around the world and help us prepare for any challenges that may arise in the Philippines. Together, we will reaffirm our commitment to follow wherever God leads us and continue the mission He has entrusted to us, no matter the cost."
+        />
+        <meta
+          property="og:image"
+          content="https://conference.cbc.org.ph/images/preview.jpg"
+        />
+        <meta property="og:url" content="https://conference.cbc.org.ph" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Going Where He Leads Me - Missions Conference"
+        />
+        <meta
+          name="twitter:description"
+          content="We invite you to join us as we reignite our passion for local and global missions, even amidst pressing global and economic challenges. At the conference, we will hear a powerful testimony from a missionary who has experienced persecution firsthand, along with insights from our resource speaker from Voice of the Martyrs Philippines. Their experiences will illuminate the harsh realities faced by believers around the world and help us prepare for any challenges that may arise in the Philippines. Together, we will reaffirm our commitment to follow wherever God leads us and continue the mission He has entrusted to us, no matter the cost."
+        />
+        <meta
+          name="twitter:image"
+          content="https://conference.cbc.org.ph/images/preview.jpg"
+        />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <HeaderSection />
       <WhyJoinSection />
       <AgendaSection />
