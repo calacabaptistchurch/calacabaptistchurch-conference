@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import CountdownTimer from "./CountdownTimer";
 
 const FAQItem: React.FC<{ question: string; answer: string }> = ({
   question,
@@ -99,6 +100,8 @@ const BeASponsor: React.FC = () => {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
+      {/* Sticky Countdown Timer */}
+      <CountdownTimer targetDate="2024-10-06T00:00:00+08:00" />
 
       <div className="bg-gray-100 text-gray-900 py-12 px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
@@ -109,6 +112,14 @@ const BeASponsor: React.FC = () => {
           <h2 className="text-xl text-gray-600">
             Partner with Us to Make a Global Impact
           </h2>
+          <div className="relative py-8 px-6 lg:px-10">
+            <a
+              href="https://forms.gle/87b4MLVAjo8noFnc9"
+              className="bg-brightYellow text-deepPurple text-lg font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:-translate-y-1 hover:bg-yellow-600"
+            >
+              Become a Sponsor Today!
+            </a>
+          </div>
         </header>
 
         {/* Hero Image */}
@@ -119,14 +130,6 @@ const BeASponsor: React.FC = () => {
             className="w-full h-80 object-cover"
             loading="lazy"
           />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <a
-              href="https://forms.gle/87b4MLVAjo8noFnc9"
-              className="bg-brightYellow text-deepPurple text-lg font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:-translate-y-1 hover:bg-yellow-600"
-            >
-              Become a Sponsor Today!
-            </a>
-          </div>
         </div>
 
         {/* Introduction */}
@@ -134,10 +137,10 @@ const BeASponsor: React.FC = () => {
           <p className="text-lg text-gray-700 mb-4">
             The upcoming Missions Conference is a pivotal moment for us to
             unite, educate, reignite, and support the global spread of the
-            Gospel. This year, our goal is to extend our reach, build new
-            churches, and provide vital resources to those in need. We invite
-            you to join us in this mission—your support is crucial to our
-            success.
+            Gospel in the midst of pressing global and economic challenges. This
+            year, our goal is to extend our reach, build new churches, and
+            provide vital resources to those in need. We invite you to join us
+            in this mission—your support is crucial to our success.
           </p>
           <p className="text-lg text-gray-700">
             As a sponsor, you’ll be an integral part of our mission to transform
@@ -268,7 +271,7 @@ const BeASponsor: React.FC = () => {
             ].map((org) => (
               <div
                 key={org.name}
-                className="flex items-center bg-gray-100 p-6 rounded-lg shadow-md"
+                className="flex items-center bg-gray-100 p-6 rounded-lg shadow-md transition-transform transform hover:-translate-y-2"
               >
                 <img
                   src={org.logo}
@@ -282,7 +285,7 @@ const BeASponsor: React.FC = () => {
                       href={org.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline"
+                      className="hover:underline hover:text-yellow-600"
                     >
                       {org.name}
                     </a>
@@ -306,7 +309,7 @@ const BeASponsor: React.FC = () => {
         </p>
         <a
           href="https://forms.gle/87b4MLVAjo8noFnc9"
-          className="bg-brightYellow text-deepPurple text-lg font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:-translate-y-1 hover:bg-yellow-600"
+          className="bg-brightYellow text-deepPurple text-lg font-semibold py-2 px-4 rounded-lg shadow-lg duration-300 transform transition-transform hover:-translate-y-2 hover:bg-yellow-600"
         >
           Become a Sponsor Today!
         </a>
