@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import CountdownTimer from "./CountdownTimer";
+import BackgroundImage from "/images/map-background.svg";
 
 const FAQItem: React.FC<{ question: string; answer: string }> = ({
   question,
@@ -125,7 +126,7 @@ const BeASponsor: React.FC = () => {
         {/* Hero Image */}
         <div className="relative bg-gray-200 rounded-lg overflow-hidden mb-12">
           <img
-            src="/images/be-a-sponsor-header.png"
+            src="/images/be-a-sponsor-header.svg"
             alt="Mission Work"
             className="w-full h-80 object-cover"
             loading="lazy"
@@ -220,7 +221,10 @@ const BeASponsor: React.FC = () => {
       </section>
 
       {/* Mission Organizations We Support */}
-      <section className="bg-gray-100 py-16 px-6 lg:px-20">
+      <section
+        className="relative bg-cover bg-center py-16 px-6 lg:px-20"
+        style={{ backgroundImage: `url(${BackgroundImage})` }}
+      >
         <div className="max-w-3xl mx-auto">
           <h3 className="text-2xl font-semibold text-gray-900 mb-6">
             Mission Organizations We Support
