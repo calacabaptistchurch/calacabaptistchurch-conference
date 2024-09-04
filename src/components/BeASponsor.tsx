@@ -50,7 +50,7 @@ const BeASponsor: React.FC = () => {
     {
       question: "How can I become a sponsor?",
       answer:
-        'To become a sponsor, simply click the "Become a Sponsor Today!" button at the top or bottom of this page. You will be redirected to a Google form where you can fill out your sponsorship details.',
+        'To become a sponsor, simply click the "Become a Sponsor Today!" button above this section or top of this page. You will be redirected to a Google form where you can fill out your sponsorship details.',
     },
     {
       question: "How will my sponsorship be used?",
@@ -68,7 +68,7 @@ const BeASponsor: React.FC = () => {
         "Yes, if you prefer to remain anonymous, you can indicate this preference in the sponsorship form.",
     },
     {
-      question: "How do I receive missions reports??",
+      question: "How do I receive missions reports?",
       answer:
         "We provide missions reports through the email you provide and also publish them on our website.",
     },
@@ -225,11 +225,11 @@ const BeASponsor: React.FC = () => {
         className="relative bg-cover bg-center py-16 px-6 lg:px-20"
         style={{ backgroundImage: `url(${BackgroundImage})` }}
       >
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <h3 className="text-2xl font-semibold text-gray-900 mb-6">
             Mission Organizations We Support
           </h3>
-          <div className="space-y-6">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 name: "Kapatid Ministry, Inc.",
@@ -241,7 +241,7 @@ const BeASponsor: React.FC = () => {
               {
                 name: "Baptist Bible Seminary & Institute (BBSI)",
                 description:
-                  "At Baptist Bible Seminary & Institute (BBSI), our mission is clear and unwavering: to develop dedicated men and women, called by a divine purpose, through robust biblical training, and empower them to effectively share the message of Christ with the world.",
+                  "BBSI mission is to develop dedicated men and women, called by a divine purpose, through robust biblical training, and empower them to effectively share the message of Christ with the world.",
                 logo: "/images/bbsi-logo.png",
                 link: "https://www.bbsi.edu.ph",
               },
@@ -284,7 +284,7 @@ const BeASponsor: React.FC = () => {
                   loading="lazy"
                 />
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900">
+                  <h4 className="text-md font-semibold text-gray-900">
                     <a
                       href={org.link}
                       target="_blank"
@@ -294,7 +294,7 @@ const BeASponsor: React.FC = () => {
                       {org.name}
                     </a>
                   </h4>
-                  <p className="text-gray-600">{org.description}</p>
+                  <p className="text-gray-600 text-sm">{org.description}</p>
                 </div>
               </div>
             ))}
