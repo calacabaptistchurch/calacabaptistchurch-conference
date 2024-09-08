@@ -159,7 +159,7 @@ const BeASponsor: React.FC = () => {
           </h3>
           <div className="space-y-6 text-white grid gap-8 md:grid-cols-1 lg:grid-cols-2">
             <div className="flex items-center space-x-4">
-              <i className="fas fa-hands-helping fa-3x text-blue-500"></i>
+              <i className="fas fa-hands-helping fa-3x w-24 h-24 object-cover rounded-full mr-6 text-blue-500"></i>
               <div>
                 <h4 className="text-lg font-semibold">Community Impact</h4>
                 <p className="text-white-600">
@@ -172,7 +172,7 @@ const BeASponsor: React.FC = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <i className="fas fa-graduation-cap fa-3x text-green-500"></i>
+              <i className="fas fa-graduation-cap fa-3x w-24 h-24 object-cover rounded-full mr-6 text-green-500"></i>
               <div>
                 <h4 className="text-lg font-semibold">Educational Support</h4>
                 <p className="text-white-600">
@@ -185,7 +185,7 @@ const BeASponsor: React.FC = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <i className="fas fa-church fa-3x text-purple-500"></i>
+              <i className="fas fa-church fa-3x w-24 h-24 object-cover rounded-full mr-6 text-purple-500"></i>
               <div>
                 <h4 className="text-lg font-semibold">
                   Pastors and Church Workers Support
@@ -200,12 +200,7 @@ const BeASponsor: React.FC = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <div
-                className="flex items-center justify-right"
-                style={{ width: "80px", height: "50px" }}
-              >
-                <i className="fas fa-globe fa-3x text-orange-500"></i>
-              </div>
+              <i className="fas fa-users-rays fa-3x w-24 h-24 object-cover rounded-full mr-6 text-orange-500"></i>
               <div>
                 <h4 className="text-lg font-semibold">
                   Mission Organization Support
