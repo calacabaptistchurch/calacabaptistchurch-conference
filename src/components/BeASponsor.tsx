@@ -153,11 +153,11 @@ const BeASponsor: React.FC = () => {
       </div>
       {/* Why Sponsor */}
       <section className="bg-deepRed py-16 px-6 lg:px-20">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <h3 className="text-2xl font-semibold text-white mb-6">
             Why Sponsor?
           </h3>
-          <div className="space-y-6 text-white">
+          <div className="space-y-6 text-white grid gap-8 md:grid-cols-1 lg:grid-cols-2">
             <div className="flex items-center space-x-4">
               <i className="fas fa-hands-helping fa-3x text-blue-500"></i>
               <div>
@@ -200,10 +200,12 @@ const BeASponsor: React.FC = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <i
-                className="fas fa-globe fa-3x text-orange-500"
-                style={{ width: "60px", height: "50px" }}
-              ></i>
+              <div
+                className="flex items-center justify-right"
+                style={{ width: "80px", height: "50px" }}
+              >
+                <i className="fas fa-globe fa-3x text-orange-500"></i>
+              </div>
               <div>
                 <h4 className="text-lg font-semibold">
                   Mission Organization Support
