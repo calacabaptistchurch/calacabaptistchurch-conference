@@ -58,7 +58,7 @@ const MainSlide: React.FC = () => {
         </div>
 
         <p className="text-sm md:text-lg font-light mb-4">
-          Venue: Calaca City Global College (CCGC) - Auditorium
+          Venue: Dacanlao G. Agoncillo National High School
         </p>
 
         {/* Partnership Section */}
